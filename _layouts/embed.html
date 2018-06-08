@@ -1,0 +1,12 @@
+{% assign rev = site.time | date: '%s' %}
+<!DOCTYPE html>
+<html lang="en-US" class="{{page.class}}">
+{% include head.html %}
+<body class="d-flex flex-column">
+    <main role="main" class="mb-auto">
+        {% include svg.html %}
+        {{content}}
+    </main>
+    {% include js.html %}
+</body>
+</html>

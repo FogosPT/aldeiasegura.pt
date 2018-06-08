@@ -1,0 +1,97 @@
+
+{% raw %}
+<script type="x-tmpl-mustache" data-template="stats">
+    <div><strong>Comments</strong></div>
+    <div>
+        <span><strong>{{receive}}</strong> Received</span>
+        <span><strong>{{sent}}</strong> Sent</span>
+    </div>
+    <div>Most received from {{mostCommentsReceive.player.displayName}}</div>
+    <div>Most sent to {{mostCommentsSent.player.displayName}}</div>
+</script>
+
+<script type="x-tmpl-mustache" data-template="activity">
+    <div><strong>Activity</strong></div>
+</script>
+
+<script type="x-tmpl-mustache" data-template="post">
+    <article class="card" data-username="{{username}}">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12 col-md-6 post">
+                    {{#post}}
+                        <blockquote class="embedly-card">
+                            <h4><a href="{{link}}">{{message}}</a></h4>
+                        </blockquote>
+                    {{/post}}
+                </div>
+                <ul class="col-12 col-md-6 list-unstyled clearfix comments">
+                    {{#comments}}
+                        <li class="comment {{#owner.same}}owner{{/owner.same}}">
+                            <img class="avatar" src="{{owner.avatar}}" /> <a class="link" href="https://instagram.com/{{owner.username}}">{{owner.displayName}}</a>
+                            <p class="text">{{comment.text}}</p>
+                        </li>
+                    {{/comments}}
+                    {{^comments}}
+                        <li class="empty">Nothing to see here</li>
+                    {{/comments}}
+                </ul>
+            </div>
+        </div>
+        {{#owner}}
+        <div class="card-footer">
+            <div class="row">
+                {{#avatar}}
+                <div class="col-12 col-md-4 avatar">
+                    <div class="d-flex align-items-start">
+                        <img class="rounded-circle" src="{{avatar}}">
+                        <div class="info">
+                            <div class="name">{{displayName}}</div>
+                            <div class="country"><img src="/assets/images/flags/{{country}}.svg" /></div>
+                        </div>
+                    </div>
+                </div>
+                {{/avatar}}
+                <div class="col-12 col-md-4 stats"></div>
+                <div class="col-12 col-md-4 activity"></div>
+            </div>
+        </div>
+        {{/owner}}
+    </article>
+</script>
+
+<script type="x-tmpl-mustache" data-template="latest-posts">
+    <h1>Latest Posts</h1>
+    {{#.}}
+        {{> post}}
+    {{/.}}
+    {{^.}}
+        <p>Nothing to see here</p>
+    {{/.}}
+</script>
+
+<script type="x-tmpl-mustache" data-template="player-posts">
+    {{#player}}
+    <h1>{{displayName}}{{^displayName}}{{username}}{{/displayName}}'s Posts</h1>
+    {{/player}}
+    {{#posts}}
+        {{> post}}
+    {{/posts}}
+    {{^posts}}
+        <p>Nothing to see here</p>
+    {{/posts}}
+</script>
+
+<script type="x-tmpl-mustache" data-template="players">
+    {{#.}}
+        <li class="list-group-item">
+            <a href="#/players/{{username}}">
+                {{displayName}}{{^displayName}}{{username}}{{/displayName}}
+            </a>
+        </li>
+    {{/.}}
+    {{^.}}
+        <li class="list-group-item">Nothing to see here</li>
+    {{/.}}
+</script>
+{% endraw %}

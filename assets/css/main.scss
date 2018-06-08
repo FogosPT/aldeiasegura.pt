@@ -1,0 +1,233 @@
+---
+---
+
+/* yes, the lines above are needed! */
+
+$green-dark: #215048;
+$green-light: #21755D;
+$green-lighter: #63B78B;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F4EAE0;
+}
+
+a {
+  color: #ffffff;
+  img, svg {
+    opacity: 1;
+  }
+  &:hover {
+    img, svg {
+      opacity: .75;
+    }
+  }
+}
+
+h1 {
+  padding: 1.5rem 0 .5rem 0;
+  text-transform: uppercase;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+.loading {
+  body {
+    &:before, &:after {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 3rem;
+      height: 3rem;
+      margin: -1.5rem 0 0 -1.5rem;
+      border-radius: 50%;
+      background: rgba(#000, .2);
+      animation: loading 2.0s infinite ease-in-out;
+    }
+    &:after {
+      animation-delay: -1.0s;
+    }
+  }
+  main {
+    opacity: .05;
+  }
+}
+
+#header {
+  nav {
+    background: -moz-linear-gradient(-45deg, #215048 0%, #21755D 100%);
+    background: -webkit-linear-gradient(-45deg, #215048 0%, #21755D 100%);
+    background: linear-gradient(135deg, #215048 0%, #21755D 100%);
+  }
+
+  .navbar {
+    height: 4rem;
+    padding: 0;
+    .navbar-brand {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      font-size: 32px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+#main {
+  margin-top: 2rem;
+
+  .heading {
+    margin-top: 1rem;
+
+    .agas {
+      padding-top: 70px;
+    }
+  }
+
+  .reasons{
+    margin-top: 1rem;
+
+    ul{
+      list-style-image: url('../images/li.png');
+    }
+  }
+
+  .topic{
+    margin-top: 2rem;
+
+    .topic3{
+      height: 94px;
+    }
+
+    footer{
+      background: none;
+    }
+  }
+
+  .kit{
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  h1 {
+    color: $green-dark;
+  }
+
+  h2 {
+    color: $green-lighter;
+  }
+
+  h3 {
+    color: $green-dark;
+    font-size: 1.2rem;
+  }
+
+  .green-bg{
+    background: $green-dark;
+
+    .heading{
+      text-align: center;
+
+      h2,h3{
+        color: #ffffff;
+      }
+    }
+
+    .warning{
+      justify-content: center;
+      margin-top:2rem;
+      padding-bottom: 2rem;
+
+      div{
+        border: 5px solid white;
+        padding: 3rem;
+        color: white;
+
+        p{
+          text-align: center;
+          font-weight: bold;
+          font-size: 43px;
+          margin:0;
+
+          &.call{
+            font-size:104px;
+          }
+        }
+      }
+    }
+  }
+
+  .landscape{
+    margin-top: 3rem;
+
+    img{
+      margin: 0 auto;
+    }
+  }
+}
+
+footer{
+  background: $green-dark;
+  padding: 1.5rem 0;
+
+  .text{
+    size: 10px;
+    color: white;
+  }
+}
+.not-found main {
+  padding: 0;
+  .row {
+    height: 100vh;
+  }
+}
+
+@keyframes loading {
+  0%, 100% {
+    transform: scale(0.0);
+  }
+  50% {
+    transform: scale(1.0);
+  }
+}
+
+.mobile-m{
+  margin-top:3em;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .mobile-m{
+    margin-top:2em;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .mobile-m{
+    margin-top:2em;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .mobile-m{
+    margin-top:0;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .mobile-m{
+    margin-top:0;
+  }
+}
