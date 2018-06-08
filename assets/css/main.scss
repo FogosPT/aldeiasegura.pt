@@ -86,7 +86,7 @@ img, svg {
     margin-top: 1rem;
 
     .agas {
-      padding-top: 70px;
+      padding-top: 10px;
     }
   }
 
@@ -100,6 +100,8 @@ img, svg {
 
   .topic{
     margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid $green-dark;
 
     .topic3{
       height: 94px;
@@ -113,6 +115,7 @@ img, svg {
   .kit{
     margin-top: 2rem;
     justify-content: center;
+    border-bottom: 3px solid $green-dark;
   }
 
   h1 {
@@ -130,6 +133,7 @@ img, svg {
 
   .green-bg{
     background: $green-dark;
+    margin-top: 3rem;
 
     .heading{
       text-align: center;
@@ -142,7 +146,10 @@ img, svg {
     .warning{
       justify-content: center;
       margin-top:2rem;
+      margin-left: 0;
+      margin-right: 0;
       padding-bottom: 2rem;
+
 
       div{
         border: 5px solid white;
@@ -209,12 +216,45 @@ footer{
   .mobile-m{
     margin-top:2em;
   }
+
+  .agas {
+    padding-top: 10px;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .mobile-m{
     margin-top:2em;
+  }
+
+  .agas {
+    padding-top: 10px;
+  }
+
+  .warning{
+    justify-content: center;
+    margin-top:2rem;
+    padding-bottom: 2rem;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    div{
+      border: 5px solid white;
+      padding: 3rem;
+      color: white;
+
+      p{
+        text-align: center;
+        font-weight: bold;
+        font-size: 43px;
+        margin:0;
+
+        &.call{
+          font-size:104px;
+        }
+      }
+    }
   }
 }
 
@@ -223,11 +263,81 @@ footer{
   .mobile-m{
     margin-top:0;
   }
+
+  .agas {
+    padding-top: 70px;
+  }
+
+  .warning{
+    justify-content: center;
+    margin-top:2rem;
+    padding-bottom: 2rem;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    div{
+      border: 5px solid white;
+      padding: 3rem;
+      color: white;
+
+      p{
+        text-align: center;
+        font-weight: bold;
+        font-size: 43px;
+        margin:0;
+
+        &.call{
+          font-size:104px;
+        }
+      }
+    }
+  }
+}
+
+.fb-page-timeline{
+  min-height: 300px;
+  padding-bottom: 2rem;
+  text-align:center;
+}
+
+.fb-page,
+.fb-page span,
+.fb-page span iframe[style] {
+  max-width: 100% !important;
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .mobile-m{
     margin-top:0;
+  }
+
+  .agas {
+    padding-top: 70px;
+  }
+
+  .warning{
+    justify-content: center;
+    margin-top:2rem;
+    padding-bottom: 2rem;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    div{
+      border: 5px solid white;
+      padding: 3rem;
+      color: white;
+
+      p{
+        text-align: center;
+        font-weight: bold;
+        font-size: 43px;
+        margin:0;
+
+        &.call{
+          font-size:104px;
+        }
+      }
+    }
   }
 }
